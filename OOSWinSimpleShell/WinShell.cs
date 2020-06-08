@@ -227,6 +227,10 @@ namespace OOSWinSimpleShell
                 path = tokens[1].Substring(0, tokens[1].LastIndexOf("\\"));
                 fileName = tokens[1].Split('\\').Last();
             }
+            else
+            {
+                path = CurrentDir;
+            }
         }
 
         private void Mkdir(string fileName, string path, string[] tokens)
@@ -373,21 +377,29 @@ namespace OOSWinSimpleShell
                                     tokens[1] = tokens[1].Trim();
                                     if ((Directory.Exists(tokens[1]) && tokens[1].Contains("\\")) || Directory.Exists(CurrentDir + "\\" + tokens[1]))
                                     {
-                                        if (AliasCurrentDir == CurrentDir && tokens[1].Contains("\\"))
-                                        {
-                                            AliasCurrentDir = CurrentDir = tokens[1];
-                                        }
-                                        else if (AliasCurrentDir != CurrentDir && tokens[1].Contains("\\"))
-                                        {
-                                            CurrentDir = tokens[1];
-                                        }
-                                        else if (AliasCurrentDir == CurrentDir && !tokens[1].Contains("\\"))
+                                        if (AliasCurrentDir == CurrentDir && tokens[1].Contains("\\") && Directory.Exists(CurrentDir + "\\" + tokens[1]))
                                         {
                                             AliasCurrentDir = CurrentDir += "\\" + tokens[1];
                                         }
-                                        else
+                                        else if (AliasCurrentDir != CurrentDir && tokens[1].Contains("\\") && Directory.Exists(CurrentDir + "\\" + tokens[1]))
                                         {
                                             CurrentDir += "\\" + tokens[1];
+                                        }
+                                        else if (AliasCurrentDir == CurrentDir && Directory.Exists(CurrentDir + "\\" + tokens[1]))
+                                        {
+                                            AliasCurrentDir = CurrentDir += "\\" + tokens[1];
+                                        }
+                                        else if (AliasCurrentDir != CurrentDir && Directory.Exists(CurrentDir + "\\" + tokens[1]))
+                                        {
+                                            CurrentDir += "\\" + tokens[1];
+                                        }
+                                        else if (AliasCurrentDir == CurrentDir && !Directory.Exists(CurrentDir + "\\" + tokens[1]))
+                                        {
+                                            AliasCurrentDir = CurrentDir = tokens[1];
+                                        }
+                                        else
+                                        {
+                                            CurrentDir = tokens[1];
                                         }
                                     }
                                     else
