@@ -49,7 +49,7 @@ ADDUSER | addUser - create a new user | **addUser** *username* | The **addUser**
 RMUSER | rmUser - delete a user account and related files | **rmUser** *username* | The **rmUser** deletes the entry from *Users.db* database. The named user must exist. | x | Command **userdel** is the Linux counterpart. |
 
 ## To-Do List
-- [ ] Create directory three list option when using **list** command
+- [ ] Create directory tree list option when using **list** command
 
 ## Screenshots
 <img src="https://github.com/AleksaMCode/Simple-Windows-Shell/blob/master/login-success.jpg?raw=true"><img>
