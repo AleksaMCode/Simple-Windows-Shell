@@ -7,17 +7,8 @@
 The application will check if such user exists in databese **Users.db**. If user exists and the *Password* is correct, user's "shell" is started, otherwise following is writtien "*Login incorrect*" to the console and the user is then prompted for the *Username* again. The whole proccess is made to mirror Linux-like behavior with *init* and *login* process.
 
 ### Shell
-Once user has succesfully logged in, he will be in **SWH** shell. Shell will prompt user for a new command. Commands *addUser* and *rmUser* can only be used by **root** user. Here is the list of the available commands:
-* where - print the name of the current/working directory
-* go - change the working directory
-  * go *path*
-  * go ..
-* create - create a directory or a file
-  * create [*-d*] *path*
-* list - list directory contents
-  * list [*path*]
-* print - print txt file on the standard output
-  * print *path*
+Once user has succesfully logged in, he will be in **SWH** shell. Shell will prompt user for a new command. Commands *addUser* and *rmUser* can only be used by **root** user.
+
 * find - print lines that match pattern with a line number
   * find "*pattern*" path 
 * findDat - search for files in a directory hierarchy
@@ -57,7 +48,7 @@ Detailed explanation of the individual commands. All commands are based on the r
 COMMAND | NAME | SYNOPSIS | DESCRIPTION | OPTIONS | LINUX COUNTERPART|
 | --- | --- | --- | --- | :---: | --- |
 | WHERE | where - print the name of the current/working directory | **where** | Print the full filename of the current working directory. | x | Command **pwd** is the Linux counterpart. |
-| GO | go - change the working directory | **go** [*path*]<br/>**go** .. | Change the working directory of the current "shell execution environment".<br/>1. If no *path* operand is given, error message "*The command or its signature is wrong.*" will be displayed.<br/>2. If the *path* operand is dot-dot, the current path will be changed to the previous subdirectory. | x | Command **cd** is the Linux counterpart. |
+| GO | go - change the working directory | **go** [*path*]<br/>**go** .. | Change the working directory of the current "shell execution environment".<br/><ul><li>If no *path* operand is given, error message "*The command or its signature is wrong.*" will be displayed.</li><li>If the *path* operand is dot-dot, the current path will be changed to the previous subdirectory.</li></ul> | x | Command **cd** is the Linux counterpart. |
 | CREATE | create - create a directory or a file | **create** [*-d*] *path* | Create the directorie or a file specified by the operand. If no option is used, command *create* will create a new file. If no *path* operand is given, error message "*The command or its signature is wrong.*" will be displayed. | **-d** *path* Create a directory at a speciefied path. | Command **mkidr**/**touch** is the Linux counterpart. |
 LIST | list - list directory contents | **list** [*path*] | List object names (files and directories) alphabetically. If no *path* operand is given, current directory content will be displayed. | x | Command **ls** is the Linux counterpart. |
-PRINT | print - print txt file on the standard output | **print** [*path*] | Print a file with extensions.<br/>1. If no *path* operand is given, error message "*The command or its signature is wrong.*" will be displayed.<br/>2. If file has no extension, error message "*File **filename** doesn't have extension information.*" or "*File doesn't have an extension.*" will be displayed.<br/>3. If file isn't a text file, error message "*File **filename** is not a text file.*" will be displayed.<br/>4. If file doesn't exist in the given path, error message "*File **filename** doesn't exist in path **path**.*" | x | Command **cat** is the Linux counterpart. |
+PRINT | print - print txt file on the standard output | **print** [*path*] | Print a file with extensions.<br/><ul><li>If no *path* operand is given, error message "*The command or its signature is wrong.*" will be displayed.</li><li>If file has no extension, error message "*File **filename** doesn't have extension information.*" or "*File doesn't have an extension.*" will be displayed.</li><li>If file isn't a text file, error message "*File **filename** is not a text file.*" will be displayed.</li><li>If file doesn't exist in the given path, error message "*File **filename** doesn't exist in path **path**.*"</li></ul> | x | Command **cat** is the Linux counterpart. |
