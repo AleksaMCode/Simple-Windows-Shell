@@ -9,19 +9,6 @@ The application will check if such user exists in databese **Users.db**. If user
 ### Shell
 Once user has succesfully logged in, he will be in **SWH** shell. Shell will prompt user for a new command. Commands *addUser* and *rmUser* can only be used by **root** user.
 
-* find - print lines that match pattern with a line number
-  * find "*pattern*" path 
-* findDat - search for files in a directory hierarchy
-  * findDat *filename* *path*
-* clear - reset the terminal
-* alias - customize "bash prompt"
-  * alias
-  * alias *newaliasname*
-* exit - cause user's shell termination
-* logout - logout and return to the "*login* process" (**LoginScreen()**)
-* addUser - create a new user
-* rmUser - delete a user account and related files
-
 ### Database
 The database contains 3 users that have equivalent *Username* and *Password*.
 | N. | Username | Password |
