@@ -480,7 +480,7 @@ namespace OOSWinSimpleShell
                                 }
                                 else
                                 {
-                                    Console.WriteLine("File '{0}' doesn't exist in path {1}", tokens[1], CurrentDir);
+                                    Console.WriteLine("File '{0}' doesn't exist in path {1}.", tokens[1], CurrentDir);
                                 }
                                 break;
                             }
