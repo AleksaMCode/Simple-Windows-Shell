@@ -60,3 +60,10 @@ EXIT | exit - cause user's shell termination | **exit** | **exit** closes SWS pr
 LOGOUT | logout - logout and return to the "login process" | **logout** | **logout** return *false* to the * ````LoginScreen()```` | x | Command **logout** is the Linux counterpart. |
 ADDUSER | addUser - create a new user | **addUser** *username* | The **addUser** creates a new user account with a name that has been specified on the command line. User will be prompted to enter a password after invoking this command. | x | Command **useradd** is the Linux counterpart. |
 RMUSER | rmUser - delete a user account and related files | **rmUser** *username* | The **rmUser** deletes the entry from *Users.db* database. The named user must exist. | x | Command **userdel** is the Linux counterpart. |
+
+## To-Do List
+- [ ] Create directory three list option when using **list** command
+
+## Screenshots
+<img src="https://github.com/AleksaMCode/Simple-Windows-Shell/blob/master/login-success.jpg?raw=true"><img>
+<img src="https://github.com/AleksaMCode/Simple-Windows-Shell/blob/master/login-fail.jpg?raw=true"><img>
