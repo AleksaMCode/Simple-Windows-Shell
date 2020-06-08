@@ -54,61 +54,10 @@ CREATE TABLE Users (
 
 ## Commands
 Detailed explanation of the individual commands. All commands are based on the real Linux commands and they are simplified.
-### WHERE
-#### NAME 
-where - print the name of the current/working directory
-#### SYNOPSIS
-**where**
-#### DESCRIPTION
-Print the full filename of the current working directory.
-#### LINUX COUNTERPART
-Command **pwd** is the Linux counterpart.
-
-### GO
-#### NAME 
-go - change the working directory
-#### SYNOPSIS
-**go** [*path*]
-**go** ..
-#### DESCRIPTION
-Change the working directory of the current "shell execution environment".
-1. If no *path* operand is given, error message "*The command or its signature is wrong.*" will be displayed.
-2. If the *path* operand is dot-dot, the current path will be changed to the previous subdirectory.
-#### LINUX COUNTERPART
-Command **cd** is the Linux counterpart.
-
-### CREATE
-#### NAME 
-create - create a directory or a file
-#### SYNOPSIS
-**create** [*-d*] *path*
-#### DESCRIPTION
-Create the directorie or a file specified by the operand. If no option is used, command *create* will create a new file. If no *path* operand is given, error message "*The command or its signature is wrong.*" will be displayed.
-#### OPTIONS
-* **-d** *path* Create a directory at a speciefied path.
-#### LINUX COUNTERPART
-Command **mkidr**/**touch** is the Linux counterpart.
-
-### LIST
-#### NAME 
-list - list directory contents 
-#### SYNOPSIS
-**list** [*path*]
-#### DESCRIPTION
-List object names (files and directories) alphabetically. If no *path* operand is given, current directory content will be displayed.
-#### LINUX COUNTERPART
-Command **ls** is the Linux counterpart.
-
-### PRINT
-#### NAME 
-print - print txt file on the standard output 
-#### SYNOPSIS
-**list** [*path*]
-#### DESCRIPTION
-Print a file with extensions.
-1. If no *path* operand is given, error message "*The command or its signature is wrong.*" will be displayed.
-2. If file has no extension, error message "*File **filename** doesn't have extension information.*" or "*File doesn't have an extension.*" will be displayed.
-3. If file isn't a text file, error message "*File **filename** is not a text file.*" will be displayed.
-4. If file doesn't exist in the given path, error message "*File **filename** doesn't exist in path **path**.*"
-#### LINUX COUNTERPART
-Command **cat** is the Linux counterpart.
+COMMAND | NAME | SYNOPSIS | DESCRIPTION | OPTIONS | LINUX COUNTERPART|
+| --- | --- | --- | --- | :---: | --- |
+| WHERE | where - print the name of the current/working directory | **where** | Print the full filename of the current working directory. | x | Command **pwd** is the Linux counterpart. |
+| GO | go - change the working directory | **go** [*path*]<br/>**go** .. | Change the working directory of the current "shell execution environment".<br/>1. If no *path* operand is given, error message "*The command or its signature is wrong.*" will be displayed.<br/>2. If the *path* operand is dot-dot, the current path will be changed to the previous subdirectory. | x | Command **cd** is the Linux counterpart. |
+| CREATE | create - create a directory or a file | **create** [*-d*] *path* | Create the directorie or a file specified by the operand. If no option is used, command *create* will create a new file. If no *path* operand is given, error message "*The command or its signature is wrong.*" will be displayed. | **-d** *path* Create a directory at a speciefied path. | Command **mkidr**/**touch** is the Linux counterpart. |
+LIST | list - list directory contents | **list** [*path*] | List object names (files and directories) alphabetically. If no *path* operand is given, current directory content will be displayed. | x | Command **ls** is the Linux counterpart. |
+PRINT | print - print txt file on the standard output | **print** [*path*] | Print a file with extensions.<br/>1. If no *path* operand is given, error message "*The command or its signature is wrong.*" will be displayed.<br/>2. If file has no extension, error message "*File **filename** doesn't have extension information.*" or "*File doesn't have an extension.*" will be displayed.<br/>3. If file isn't a text file, error message "*File **filename** is not a text file.*" will be displayed.<br/>4. If file doesn't exist in the given path, error message "*File **filename** doesn't exist in path **path**.*" | x | Command **cat** is the Linux counterpart. |
