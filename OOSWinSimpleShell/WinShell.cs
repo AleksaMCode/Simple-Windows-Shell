@@ -57,7 +57,6 @@ namespace OOSWinSimpleShell
                     if (key.Key == ConsoleKey.Backspace && pass.Length > 0)
                     {
                         pass = pass.Substring(0, (pass.Length - 1));
-                        Console.Write("\b \b");
                     }
                     else if (key.Key == ConsoleKey.Enter)
                     {
