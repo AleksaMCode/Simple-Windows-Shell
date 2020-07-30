@@ -50,6 +50,7 @@ RMUSER | rmUser - delete a user account and related files | **rmUser** *username
 
 ## To-Do List
 - [ ] Create directory tree list option when using **list** command
+- [ ] Parallelise the code.
 
 ## Screenshots
 <img src="https://github.com/AleksaMCode/Simple-Windows-Shell/blob/master/login-success.jpg?raw=true"><img>
