@@ -1,5 +1,5 @@
 # Simple Windows Shell
-**SWH** is a console applications written in **C#** that emulates Linux-like command behavior on Windows. Operating Systems course project, as taught at the Faculty of Electrical Engineering Banja Luka.
+Operating Systems course project, as taught at the Faculty of Electrical Engineering Banja Luka. **SWH** is a console applications written in **C#** that emulates Linux-like command behavior on Windows.
 ## Usage
 ### Login
 **LoginScreen()** function is used when signing onto a "system". To use the application user must first login. At login, user needs to provide his *Username* and *Password*. **LoginScreen()** prompts for the *Username*. The user is then prompted for a *Password*, where appropriate. Echoing is disabled to prevent revealing the *Password* and its length.
